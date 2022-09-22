@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="brazo_sociedad">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0111550816057503 -0.125993744795836 0.0852533988124098"
+        rpy="0 0 0" />
+      <mass
+        value="0.496494992903059" />
+      <inertia
+        ixx="0.00209462542311731"
+        ixy="3.33770083165509E-05"
+        ixz="-2.94739037540976E-06"
+        iyy="0.00281909608076732"
+        iyz="-1.44128926790865E-06"
+        izz="0.0019061246181238" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brazo_sociedad/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.525490196078431 0.525490196078431 0.525490196078431 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brazo_sociedad/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="link_1">
+    <inertial>
+      <origin
+        xyz="0.0019628375988873 -0.00326630888514658 0.0453706982114051"
+        rpy="0 0 0" />
+      <mass
+        value="0.727982956486153" />
+      <inertia
+        ixx="0.00180244990388783"
+        ixy="1.50999713791093E-05"
+        ixz="-0.000102383780556745"
+        iyy="0.00162382925420862"
+        iyz="7.80835216929603E-06"
+        izz="0.00181368989537436" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brazo_sociedad/meshes/link_1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brazo_sociedad/meshes/link_1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_1"
+    type="revolute">
+    <origin
+      xyz="0.0039829 -0.085 -0.086473"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="link_1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_2">
+    <inertial>
+      <origin
+        xyz="-0.00273812000992386 -0.00386813497105661 0.0634837850242389"
+        rpy="0 0 0" />
+      <mass
+        value="0.784842802764081" />
+      <inertia
+        ixx="0.00306382721717923"
+        ixy="-3.42612389478767E-06"
+        ixz="3.26923692519107E-05"
+        iyy="0.00292478904676872"
+        iyz="1.70130651479054E-06"
+        izz="0.000773223463182544" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brazo_sociedad/meshes/link_2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brazo_sociedad/meshes/link_2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_2"
+    type="revolute">
+    <origin
+      xyz="0.0125 0 0.0915"
+      rpy="0 0 0" />
+    <parent
+      link="link_1" />
+    <child
+      link="link_2" />
+    <axis
+      xyz="-0.0033965 -0.99999 0" />
+    <limit
+      lower="-0.75"
+      upper="0.60"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_3">
+    <inertial>
+      <origin
+        xyz="0.0682848562014784 0.000268327737997398 0.0134860411659965"
+        rpy="0 0 0" />
+      <mass
+        value="0.675178369816055" />
+      <inertia
+        ixx="0.00040330912704945"
+        ixy="7.95461637608253E-06"
+        ixz="-3.33436112625294E-05"
+        iyy="0.000849690335755489"
+        iyz="-3.29102101643685E-06"
+        izz="0.000874307701150754" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brazo_sociedad/meshes/link_3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brazo_sociedad/meshes/link_3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_3"
+    type="revolute">
+    <origin
+      xyz="0 0.0024649 0.1575"
+      rpy="0 0 0" />
+    <parent
+      link="link_2" />
+    <child
+      link="link_3" />
+     <axis
+      xyz="0.0033965 0.99999 0" />
+    <limit
+      lower="-2.15"
+      upper="-0.25"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="link_4">
+    <inertial>
+      <origin
+        xyz="0.00527649564261556 0.00158114487005342 -0.00536452839123527"
+        rpy="0 0 0" />
+      <mass
+        value="0.0436513988454039" />
+      <inertia
+        ixx="8.86119636001668E-06"
+        ixy="-1.63104435772817E-07"
+        ixz="1.57136010993116E-06"
+        iyy="1.03635586855172E-05"
+        iyz="1.38591647482851E-07"
+        izz="8.87138714678823E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brazo_sociedad/meshes/link_4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://brazo_sociedad/meshes/link_4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_4"
+    type="revolute">
+    <origin
+      xyz="0.16816 -0.0024649 0.019965"
+      rpy="0 0 0" />
+    <parent
+      link="link_3" />
+    <child
+      link="link_4" />
+    <axis
+      xyz="0.059205 0.9908 -0.1217" />
+    <limit
+      lower="-1.10"
+      upper="-0.30"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>

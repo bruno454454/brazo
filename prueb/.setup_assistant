@@ -1,0 +1,11 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: brazo_sociedad
+    relative_path: urdf/brazo_sociedad.urdf
+    xacro_args: ""
+  SRDF:
+    relative_path: config/brazo_sociedad.srdf
+  CONFIG:
+    author_name: adsad
+    author_email: brunoeldotero@gmail.com
+    generated_timestamp: 1663881233

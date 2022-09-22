@@ -1,0 +1,91 @@
+<robot name="simple_robot"> <!-- robot name- you decide -->
+<!-- sequence : link-joint-link-joint-...-link... -->
+<!-- units: meters for distance,rad in case of angles -->
+<!-- first link called base_link -->
+<link name= "base_link">
+	<visual>
+		<geometry>
+			<cylinder length="0.01" radius="0.2"/>
+		</geometry>
+		<origin rpy="0 0 0" xyz="0 0 0"/> <!-- rpy: roll pitch yaw -> orientation xyz -> position --> 
+		<material name= "base_color">
+			<color rgba="1 1 0 1"/> 
+		</material>
+	</visual>
+
+</link>
+<!-- first joint-->
+<joint name="joint1" type= "revolute"> <!-- types: revolute and prismatic -->
+	<parent link="base_link"/>
+	<child link="link1"/>
+	<origin xyz ="0 0 0"/>
+	<axis xyz="0 0 -1"/>
+	<limit effort="300" velocity="0.1" lower="-3.14159" upper="3.14159"/>
+	<dynamics damping="50" friction="1"/>
+
+</joint>
+<!-- link1-->
+<link name= "link1">
+	<visual>
+		<geometry>
+			<cylinder length="0.5" radius="0.04"/>
+		</geometry>
+		<origin rpy="0 0 0" xyz="0 0 0.25"/> <!-- rpy: roll pitch yaw -> orientation xyz -> position --> 
+		<material name= "link1_color">
+			<color rgba="1 0 0 1"/> 
+		</material>
+	</visual>
+
+</link>
+
+
+<!-- second joint-->
+<joint name="joint2" type= "prismatic"> <!-- types: revolute and prismatic -->
+	<parent link="link1"/>
+	<child link="link2"/>
+	<origin xyz ="0 0 0.5"/>
+	<axis xyz="-1 0 0"/>
+	<limit effort="300" velocity="0.1" lower="-0.3" upper="0.3"/>
+    <dynamics damping="50" friction="1"/>
+
+</joint>
+<!-- link2-->
+<link name= "link2">
+	<visual>
+		<geometry>
+        	<box size="0.3 0.04 0.04"/>
+      	</geometry>
+		<origin rpy="0 0 0" xyz="-0.15 0 0"/> <!-- rpy: roll pitch yaw -> orientation xyz -> position --> 
+		<material name= "link2_color">
+			<color rgba="1 1 0 1"/> 
+		</material>
+	</visual>
+
+</link>
+
+
+<!-- link extra-->
+<joint name="joint3" type="fixed">
+	<parent link="link2"/>
+	<child link="link3"/>
+	<origin xyz="-0.3 0 0"/>
+	<axis xyz="1 0 0"/>
+	<limit effort="300" velocity="0.1" lower="-0.2" upper="0.0"/>
+    <dynamics damping="50" friction="1"/>
+</joint>
+  
+<link name="link3">
+	<visual>
+		<geometry>
+			<box size="0.0 0.0 0.0"/>
+		</geometry>
+		<origin rpy="0 0 0" xyz="0 0 0"/> <!-- rpy: roll pitch yaw -> orientation xyz -> position --> 
+        <material name= "link3_color">
+            <color rgba="0 1 1 1"/> 
+        </material>
+	</visual>
+</link>
+
+
+</robot>
+
